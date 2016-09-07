@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 while true; do
   HTTP_CODE=$(curl -sL -w "%{http_code}" -o /dev/null "$URL_TO_CURL")
