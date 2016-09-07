@@ -1,6 +1,6 @@
 #!/bin/sh
 
 while true; do
-  #curl -sL -w "%{http_code}" "${URL_TO_CURL}" -o /dev/null;
-  sleep 1;
+  curl -sL -w "%{http_code}" -o /dev/null "$URL_TO_CURL"
+  sleep 0.1
 done;
