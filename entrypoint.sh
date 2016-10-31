@@ -18,8 +18,8 @@ done
 SECRETS_FILE="/tmp/secrets.txt"
 TRY=0
 until [ -e $SECRETS_FILE ] || [ $TRY -gt 10 ]; do
-	echo "Waiting for openam boostrap file at $BOOTSTRAP_FILE"
-	sleep 2
+	echo "Waiting for secrets boostrap file at $BOOTSTRAP_FILE"
+	sleep 3
 	let "TRY++"
 done
 
