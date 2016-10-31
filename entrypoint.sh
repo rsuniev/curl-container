@@ -19,7 +19,7 @@ SECRETS_FILE="/tmp/secrets.txt"
 TRY=0
 until [ -e $SECRETS_FILE ] || [ $TRY -gt 10 ]; do
 	echo "Waiting for secrets boostrap file at $BOOTSTRAP_FILE"
-	sleep 3
+	sleep 10
 	let "TRY++"
 done
 
