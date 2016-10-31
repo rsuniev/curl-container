@@ -33,7 +33,7 @@ fi
 source $SECRETS_FILE
 PERM_KEY=$(curl -s -H "X-Vault-Token: $TEMP_TOKEN" $CUBBY_PATH |  jq -r '.data.permKey')
 SECRET_VALUE=$(curl -H "X-Vault-Token: $PERM_KEY" $VAULT_SERVER_URL/v1/secret/security/default/testusername | jq -r '.data.value')
-$SECRET_VALUE >> /temp/curl/security/default/secret.txt
+echo $SECRET_VALUE >> /temp/curl/security/default/secret.txt
 echo "Secret retrieved and saved"
 
 host=$(hostname)
