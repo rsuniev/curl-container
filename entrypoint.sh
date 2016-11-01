@@ -27,6 +27,7 @@ if [ $TRY -lt 10 ]; then
 	echo "Found secrets file"
 else
 	echo "Didn't find secrets file. Setup has failed"
+  cat $SECRETS_FILE
   exit 1
 fi
 
